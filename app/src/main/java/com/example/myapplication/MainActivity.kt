@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validateSemester(semester: Int?): Boolean {
-        if (semester == null || semester <= 0) {
+        if (semester == null || semester <= 0 || semester > 14) {
             semesterEditText.error = "Semester tidak valid"
             return false
         }
